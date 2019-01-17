@@ -94,7 +94,7 @@ export default class ClassNameManager extends Plugin {
 
     handleTouchEnd(event) {
         clearTimeout(this.activeTimeoutHandler);
-		
+
         // 点在播放按钮或者控制条上，（继续）展现控制条
         let clickOnControls = false;
         // @todo 处理得不够优雅
@@ -114,7 +114,7 @@ export default class ClassNameManager extends Plugin {
             }, this.activeTimeout);
         }
 
-		if (this.isPaused === false) {
+		if (this.isPaused === false && !clickOnControls && this.player.options.isClickPause) {
 			this.player.pause();
 		}
 		this.isPaused = this.player.paused();

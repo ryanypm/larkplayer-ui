@@ -28,8 +28,6 @@ export default class Volume extends Component{
 
         Events.on(this.icon, 'click', this.iconClick);
         this.player.on('volumechange', this.handleVolumeChange);
-		console.log('this.player = ', this.player.volume);
-		
     }
 
     iconClick(event) {
