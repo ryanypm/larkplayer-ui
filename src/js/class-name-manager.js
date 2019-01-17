@@ -21,7 +21,7 @@ const {toTitleCase, featureDetector} = util;
 export default class ClassNameManager extends Plugin {
     constructor(player, options) {
         super(player, options);
-
+		
         this.handleMouseEnter = this.handleMouseEnter.bind(this);
         this.handleMouseMove = this.handleMouseMove.bind(this);
         this.handleMouseLeave = this.handleMouseLeave.bind(this);
@@ -94,7 +94,7 @@ export default class ClassNameManager extends Plugin {
 
     handleTouchEnd(event) {
         clearTimeout(this.activeTimeoutHandler);
-
+		
         // 点在播放按钮或者控制条上，（继续）展现控制条
         let clickOnControls = false;
         // @todo 处理得不够优雅
@@ -113,6 +113,11 @@ export default class ClassNameManager extends Plugin {
                 this.player.removeClass(ClassNames.ACTIVE);
             }, this.activeTimeout);
         }
+
+		if (this.isPaused === false) {
+			this.player.pause();
+		}
+		this.isPaused = this.player.paused();
     }
 
     handleMouseEnter(event) {
@@ -196,7 +201,6 @@ export default class ClassNameManager extends Plugin {
     handleCanplay() {
         this.player.removeClass(ClassNames.WAITING);
         this.player.removeClass(ClassNames.LOADSTART);
-
         if (this.player.paused()) {
             this.player.removeClass(ClassNames.PLAYING);
             this.player.addClass(ClassNames.PAUSED);
@@ -260,7 +264,7 @@ export default class ClassNameManager extends Plugin {
     handleFirstplay() {
         // @todo 不清楚有什么用
         this.player.addClass(ClassNames.HAS_START);
-
+		this.player.play();
         clearTimeout(this.activeTimeoutHandler);
         this.player.addClass(ClassNames.ACTIVE);
         this.activeTimeoutHandler = setTimeout(() => {

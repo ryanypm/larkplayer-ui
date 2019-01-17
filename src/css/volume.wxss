@@ -1,0 +1,91 @@
+/**
+ * @file variables.less 定义一些全局变量
+ * @author yuhui<yuhui06@baidu.com>
+ * @date 2017/11/23
+ */
+.placeholder-1511407549745 {
+  display: none;
+}
+/**
+ * @file 定义一些常用的 mixins
+ * @author yuhui<yuhui06@baidu.com>
+ * @date 2017/11/9
+ * @desc
+ *    1) .file-placeholder 是因为 otp 不允许空文件上传
+ */
+.file-placeholder-1510232955822 {
+  display: none;
+}
+.lark-volume {
+  float: left;
+  *zoom: 1;
+  height: 100%;
+  width: 80px;
+  cursor: pointer;
+  margin-right: 14px;
+}
+.lark-volume:after {
+  content: '\0020';
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.lark-volume-mobile {
+  cursor: pointer;
+  padding-right: 14px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.lark-volume-icon {
+  margin-right: 4px;
+  float: left;
+}
+.lark-volume-line {
+  float: left;
+  position: relative;
+  height: 100%;
+}
+.lark-volume-line__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: #fff;
+}
+.lark-volume-line__line-padding {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  padding: 10px 0;
+  width: 100%;
+}
+.lark-volume-line__ball {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  left: 50px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+}

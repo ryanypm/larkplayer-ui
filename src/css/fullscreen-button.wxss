@@ -1,0 +1,31 @@
+/**
+ * @file variables.less 定义一些全局变量
+ * @author yuhui<yuhui06@baidu.com>
+ * @date 2017/11/23
+ */
+.placeholder-1511407549745 {
+  display: none;
+}
+.lark-exit-fullscreen {
+  display: none;
+  background: url('resource/images/exit-fullscreen.png') center no-repeat;
+  background-size: contain;
+  width: 1em;
+  height: 100%;
+}
+.lark-request-fullscreen {
+  display: block;
+}
+.lark-fullscreen-button {
+  cursor: pointer;
+  padding: 0 14px 0 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

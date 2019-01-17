@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<video id="video-el" src="https://baikebcs.bdimg.com/baike-other/big-buck-bunny.mp4"></video>
+	<script src="https://unpkg.com/larkplayer@latest/dist/larkplayer.js"></script>
+	<script src="../dist//larkplayer-ui.min.js"></script>
+	<script type="text/javascript">
+        var width = Math.min(document.body.clientWidth, 640);
+        var player = larkplayer('video-el', {
+            width: width,
+            height: width * 9 / 16,
+			controls: ['all'],
+			
+        });
+    </script>
+</body>
+</html>

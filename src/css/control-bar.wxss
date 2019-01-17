@@ -1,0 +1,42 @@
+/**
+ * @file 定义一些常用的 mixins
+ * @author yuhui<yuhui06@baidu.com>
+ * @date 2017/11/9
+ * @desc
+ *    1) .file-placeholder 是因为 otp 不允许空文件上传
+ */
+.file-placeholder-1510232955822 {
+  display: none;
+}
+/**
+ * @file variables.less 定义一些全局变量
+ * @author yuhui<yuhui06@baidu.com>
+ * @date 2017/11/23
+ */
+.placeholder-1511407549745 {
+  display: none;
+}
+.lark-control-bar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+.lark-control-bar {
+  display: none;
+  color: #fff;
+  align-items: stretch;
+  -webkit-align-items: stretch;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  height: 38px;
+  font-size: 13px;
+}
+.lark-control-bar > div:last-of-type {
+  padding-right: 14px;
+}
+.hidden-control-item {
+  display: none !important;
+}
